@@ -158,7 +158,7 @@
             background-color: rgba(46, 204, 113, 0.15);
             border-left: 4px solid #2ecc71;
             padding: 20px;
-            margin-top: 25px;
+            margin-top:二十五px;
             border-radius: 8px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(46, 204, 113, 0.2);
@@ -293,9 +293,7 @@
         <div class="content">
             <div class="step">
                 <div class="step-header">
-                    <div class="step-number">1</div>
-                    <div class="step-title">魔力兑换策略</div>
-                </div>
+                    <div class="step-number">1sv**
                 <div class="step-content">
                     <p>首先，你需要兑换一些上传量。建议按照<span class="highlight">5G为单位进行兑换</span>，因为这是最划算的兑换比例。</p>
                     <p>如果你有100万魔力，建议先兑换<span class="highlight">20G上传量</span>作为基础保障。这样可以确保你在Playlet系统中不会因为上传量不足而受限。</p>
@@ -326,10 +324,13 @@
                 <h3><i class="fas fa-download"></i> 抽奖脚本下载</h3>
                 <p>专为百万魔力用户设计的自动化抽奖脚本，支持10连抽模式，优化获奖概率</p>
                 <p>请确保你已经拥有100万以上魔力再使用此脚本</p>
-                <a href="https://github.com/user-attachments/files/27398519/Playlet.-.-.1.2.txt" class="download-btn" id="download-script">
-                    <i class="fas fa-file-code"></i> 下载抽奖脚本 (v2.5.3)
+                <a href="https://github.com/user-attachments/files/27398519/Playlet.-.-.1.2.txt" class="download-btn" download="Playlet抽奖脚本_v1.2.txt">
+                    <i class="fas fa-file-code"></i> 下载抽奖脚本 (v1.2)
                 </a>
-                <p style="margin-top: 10px; font-size: 0.9rem;">文件大小: 1.2MB | 更新日期: 2023-11-15</p>
+                <div style="margin-top: 15px; color: #85c1e9; font-size: 0.95rem;">
+                    <p><i class="fas fa-info-circle"></i> 点击下载按钮将直接下载脚本文件</p>
+                    <p>文件类型: 文本脚本文件 (.txt) | GitHub安全链接</p>
+                </div>
             </div>
         </div>
         
@@ -342,32 +343,20 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // 下载按钮交互效果
-            const downloadBtn = document.getElementById('download-script');
+            const downloadBtn = document.querySelector('.download-btn');
             
+            // 为下载按钮添加点击反馈效果
             downloadBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // 模拟下载过程
-                const originalText = downloadBtn.innerHTML;
-                downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 下载中...';
-                downloadBtn.style.opacity = '0.7';
-                downloadBtn.style.cursor = 'not-allowed';
-                
-                // 模拟下载延迟
+                // 添加短暂动画效果
+                downloadBtn.style.transform = 'scale(0.95)';
                 setTimeout(() => {
-                    downloadBtn.innerHTML = '<i class="fas fa-check"></i> 下载完成';
-                    downloadBtn.style.background = 'linear-gradient(to right, #27ae60, #2ecc71)';
-                    
-                    // 显示下载提示
-                    alert('抽奖脚本已下载完成！\n\n文件: playlet_lottery_script_v2.5.3.zip\n大小: 1.2MB\n\n请解压后按照README.md说明使用。');
-                    
-                    // 3秒后恢复按钮
-                    setTimeout(() => {
-                        downloadBtn.innerHTML = originalText;
-                        downloadBtn.style.opacity = '1';
-                        downloadBtn.style.cursor = 'pointer';
-                    }, 3000);
-                }, 1500);
+                    downloadBtn.style.transform = 'scale(1)';
+                }, 200);
+                
+                // 显示下载提示
+                setTimeout(() => {
+                    alert('抽奖脚本开始下载！\n\n文件: Playlet抽奖脚本_v1.2.txt\n来源: GitHub安全链接\n\n下载完成后请按照说明使用脚本。');
+                }, 300);
             });
             
             // 添加步骤动画效果
